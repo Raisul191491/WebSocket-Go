@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  websocket-client:
+    build:
+      context: .
+    network_mode: host
+    deploy:
+      mode: replicated
+      replicas: 10000
+    command: ["./client", "-ip=localhost", "-conn=1"]

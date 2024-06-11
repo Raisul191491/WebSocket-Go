@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  websocket-server:
+    build:
+      context: .
+    network_mode: host
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 4G
